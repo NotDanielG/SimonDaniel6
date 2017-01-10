@@ -1,10 +1,11 @@
-package guiSimon.components;
+package partnerCode;
 
 import java.awt.Color;
 
 import gui.components.Action;
 import gui.components.Button;
 import gui.components.Visible;
+import guiSimon.components.ButtonInterfaceDaniel;
 
 public class ColorButton extends Button implements ButtonInterfaceDaniel, Visible {
 	private int colorIdentifier;

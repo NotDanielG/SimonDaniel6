@@ -8,9 +8,9 @@ import java.util.List;
 
 import gui.components.TextLabel;
 import guiSimon.components.ButtonInterfaceDaniel;
-import guiSimon.components.ColorButton;
 import guiSimon.components.MoveInterfaceDaniel;
 import guiSimon.components.ProgressInterfaceDaniel;
+import partnerCode.ColorButton;
 import partnerCode.Progress;
 import gui.components.Button;
 import gui.components.ClickableScreen;
