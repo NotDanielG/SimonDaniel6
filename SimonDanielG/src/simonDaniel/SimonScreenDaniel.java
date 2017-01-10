@@ -11,6 +11,7 @@ import guiSimon.components.ButtonInterfaceDaniel;
 import guiSimon.components.MoveInterfaceDaniel;
 import guiSimon.components.ProgressInterfaceDaniel;
 import partnerCode.ColorButton;
+import partnerCode.Move;
 import partnerCode.Progress;
 import gui.components.Button;
 import gui.components.ClickableScreen;
@@ -62,7 +63,13 @@ public class SimonScreenDaniel extends ClickableScreen implements Runnable{
 //		viewObjects.add(progress);
 //		viewObjects.add(label);
 	}
-
+	private ButtonInterfaceDaniel randomMove(){
+		ButtonInterfaceDaniel b;
+		return getMove();
+	}
+	private MoveInterfaceDaniel getMove(ButtonInterfaceDaniel b){
+		return new Move();
+	}
 	private void addColorButtons() {
 		int x = 20;
 		int y = 200;

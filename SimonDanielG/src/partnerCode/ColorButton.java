@@ -21,7 +21,6 @@ public class ColorButton extends Button implements ButtonInterfaceDaniel, Visibl
 	}
 	public void setAction(Action action) {
 		
-		
 	}
 	public void highlight() {
 		
