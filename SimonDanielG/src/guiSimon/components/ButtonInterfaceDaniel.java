@@ -11,5 +11,7 @@ public interface ButtonInterfaceDaniel extends Clickable {
 	void setX(int x);
 	void setY(int y);
 	void setColor(Color c);
+	void highlight();
+	void dim();
 	
 }
