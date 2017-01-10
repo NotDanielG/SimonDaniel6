@@ -10,7 +10,7 @@ import gui.components.TextLabel;
 import guiSimon.components.ButtonInterfaceDaniel;
 import guiSimon.components.ColorButton;
 import guiSimon.components.MoveInterfaceDaniel;
-import guiSimon.components.Player;
+import guiSimon.components.Progress;
 import guiSimon.components.ProgressInterfaceDaniel;
 import gui.components.Button;
 import gui.components.ClickableScreen;
@@ -73,7 +73,7 @@ public class SimonScreenDaniel extends ClickableScreen implements Runnable{
 	}
 
 	private ProgressInterfaceDaniel makePlayer() {
-		return new Player(20,20,120,120);
+		return new Progress(20,20,120,120);
 	}
 	private ButtonInterfaceDaniel makeButton(int value, Color color) {
 		return new ColorButton(20, 200, 50, 50, "Button 0", color, new Action(){

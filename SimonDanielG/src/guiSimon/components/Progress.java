@@ -6,10 +6,10 @@ import java.awt.Graphics2D;
 import guiSimon.components.Components;
 import guiSimon.components.Visible;
 
-public class Player extends Components implements ProgressInterfaceDaniel, Visible {
+public class Progress extends Components implements ProgressInterfaceDaniel, Visible {
 	private int score;
 	private int difficulty;
-	public Player(int x, int y, int w, int h) {
+	public Progress(int x, int y, int w, int h) {
 		super(x, y, w, h);
 	}
 
