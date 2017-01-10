@@ -64,8 +64,7 @@ public class SimonScreenDaniel extends ClickableScreen implements Runnable{
 //		viewObjects.add(label);
 	}
 	private ButtonInterfaceDaniel randomMove(){
-		ButtonInterfaceDaniel b;
-		return getMove();
+		return null;
 	}
 	private MoveInterfaceDaniel getMove(ButtonInterfaceDaniel b){
 		return new Move();
