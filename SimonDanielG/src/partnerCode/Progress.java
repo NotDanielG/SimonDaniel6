@@ -1,9 +1,10 @@
-package guiSimon.components;
+package partnerCode;
 
 import java.awt.Color;
 import java.awt.Graphics2D;
 
 import guiSimon.components.Components;
+import guiSimon.components.ProgressInterfaceDaniel;
 import guiSimon.components.Visible;
 
 public class Progress extends Components implements ProgressInterfaceDaniel, Visible {

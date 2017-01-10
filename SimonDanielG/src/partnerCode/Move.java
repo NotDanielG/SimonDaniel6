@@ -1,4 +1,6 @@
-package guiSimon.components;
+package partnerCode;
+
+import guiSimon.components.MoveInterfaceDaniel;
 
 public class Move implements MoveInterfaceDaniel {
 
