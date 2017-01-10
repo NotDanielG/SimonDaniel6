@@ -2,8 +2,7 @@ package guiSimon.components;
 
 import gui.components.Visible;
 
-public interface PlayerInterface extends Visible {
+public interface ProgressInterfaceDaniel extends Visible {
 	void increaseScore(int i);
-	void increaseLength(int i);
-	
+	void setGameDifficulty(int i);
 }
