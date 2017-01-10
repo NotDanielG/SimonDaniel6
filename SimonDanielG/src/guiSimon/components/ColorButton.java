@@ -22,11 +22,11 @@ public class ColorButton extends Button implements ButtonInterfaceDaniel, Visibl
 		
 	}
 	public void highlight() {
-		// TODO Auto-generated method stub
+		
 		
 	}
 	public void dim() {
-		// TODO Auto-generated method stub
+		
 		
 	}
 }
