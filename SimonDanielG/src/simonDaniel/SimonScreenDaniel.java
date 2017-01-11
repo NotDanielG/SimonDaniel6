@@ -4,6 +4,7 @@ import java.awt.Color;
 
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 
 import gui.components.TextLabel;
@@ -49,19 +50,7 @@ public class SimonScreenDaniel extends ClickableScreen implements Runnable{
 		buttons = new ArrayList<ButtonInterfaceDaniel>();
 		player = makePlayer();
 		addColorButtons();
-		viewObjects.add((Visible) player);
-		viewObjects.add((Visible) buttons);
-//		addButtons()
-//		progress = getProgress();
-//		label = new TextLabel(130,230,300,40,"Let's play Simon!");
-//		sequence = new ArrayList<MoveInterface>();
-//		//add 2 moves to start
-//		lastSelectedButton = -1;
-//		sequence.add(randomMove());
-//		sequence.add(randomMove());
-//		roundNumber = 0;
-//		viewObjects.add(progress);
-//		viewObjects.add(label);
+		viewObjects.add(player);
 	}
 	private ButtonInterfaceDaniel randomMove(){
 		return null;

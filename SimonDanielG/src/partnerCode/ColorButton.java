@@ -5,10 +5,11 @@ import java.awt.Color;
 
 import gui.components.Action;
 import gui.components.Button;
+import gui.components.Clickable;
 import gui.components.Visible;
 import guiSimon.components.ButtonInterfaceDaniel;
 
-public class ColorButton extends Button implements ButtonInterfaceDaniel, Visible {
+public class ColorButton extends Button implements ButtonInterfaceDaniel, Visible, Clickable {
 	private int colorIdentifier;
 	private Action buttonAction;
 	public ColorButton(int x, int y, int w, int h, String text, Color color, Action action, int value) {
