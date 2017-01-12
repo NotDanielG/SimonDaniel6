@@ -31,5 +31,6 @@ public class ColorButton extends Button implements ButtonInterfaceDaniel{
 	}
 	public void act(){
 		buttonAction.act();
+		//idk if u need this
 	}
 }
