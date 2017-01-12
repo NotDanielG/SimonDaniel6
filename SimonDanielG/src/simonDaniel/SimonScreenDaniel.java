@@ -29,6 +29,7 @@ public class SimonScreenDaniel extends ClickableScreen implements Runnable{
 	private Color[] colorRoom;
 	private static int amountClicked;
 	private int previousMove;
+	private static ButtonInterfaceDaniel buttonS;
 	
 	public SimonScreenDaniel(int x, int y) {
 		super(x, y);
@@ -81,12 +82,24 @@ public class SimonScreenDaniel extends ClickableScreen implements Runnable{
 		return new Progress(20,20,120,120);
 	}
 	private ButtonInterfaceDaniel makeButton(int value, Color color) {
-		ButtonInterfaceDaniel b = new ColorButton(20, 200, 50, 50, "Button 0", color, new Action(){
+		buttonS = new ColorButton(20, 200, 50, 50, "Button 0", color, new Action(){
 			public void act(){
-				
+				Thread buttonPress = new Thread(new Runnable() {
+					
+					public void run() {
+						buttonS.highlight();
+						try {
+							Thread.sleep(500);
+						} catch (InterruptedException e) {
+							e.printStackTrace();
+						}
+						buttonS.dim();
+						
+					}
+				});
 			}
 		}, value);
-		return b;
+		return buttonS;
 		
 		
 		
