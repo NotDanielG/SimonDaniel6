@@ -85,7 +85,6 @@ public class SimonScreenDaniel extends ClickableScreen implements Runnable{
 		buttonS = new ColorButton(20, 200, 50, 50, "Button 0", color, new Action(){
 			public void act(){
 				Thread buttonPress = new Thread(new Runnable() {
-					
 					public void run() {
 						buttonS.highlight();
 						try {
@@ -94,9 +93,9 @@ public class SimonScreenDaniel extends ClickableScreen implements Runnable{
 							e.printStackTrace();
 						}
 						buttonS.dim();
-						
 					}
 				});
+				buttonPress.start();
 			}
 		}, value);
 		return buttonS;
