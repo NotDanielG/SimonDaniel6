@@ -75,7 +75,7 @@ public class SimonScreenDaniel extends ClickableScreen implements Runnable{
 	}
 	private ButtonInterfaceDaniel makeButton(int value, Color color) {
 		System.out.println("Hi");
-		return new ColorButton(100, 20, 100, 100, "Button 0", color, new Action(){
+		return new ColorButton(20, 200, 50, 50, "Button 0", color, new Action(){
 			public void act(){
 				
 			}
