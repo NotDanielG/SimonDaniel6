@@ -49,8 +49,11 @@ public class SimonScreenDaniel extends ClickableScreen implements Runnable{
 		colorRoom[5] = Color.cyan;
 		buttons = new ArrayList<ButtonInterfaceDaniel>();
 		player = makePlayer();
-		addColorButtons();
+//		addColorButtons();
 		viewObjects.add(player);
+		ButtonInterfaceDaniel button = makeButton(0, colorRoom[0]);
+		buttons.add(button);
+		viewObjects.add((Visible) buttons.get(0));
 	}
 	private ButtonInterfaceDaniel randomMove(){
 		return null;
@@ -71,7 +74,8 @@ public class SimonScreenDaniel extends ClickableScreen implements Runnable{
 		return new Progress(20,20,120,120);
 	}
 	private ButtonInterfaceDaniel makeButton(int value, Color color) {
-		return new ColorButton(20, 200, 50, 50, "Button 0", color, new Action(){
+		System.out.println("Hi");
+		return new ColorButton(100, 20, 100, 100, "Button 0", color, new Action(){
 			public void act(){
 				
 			}
