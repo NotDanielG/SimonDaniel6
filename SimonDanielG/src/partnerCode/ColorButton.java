@@ -9,7 +9,7 @@ import gui.components.Clickable;
 import gui.components.Visible;
 import guiSimon.components.ButtonInterfaceDaniel;
 
-public class ColorButton extends Button implements ButtonInterfaceDaniel, Visible, Clickable {
+public class ColorButton extends Button implements ButtonInterfaceDaniel{
 	private int colorIdentifier;
 	private Color color;
 	private Action buttonAction;
