@@ -29,8 +29,8 @@ public class ColorButton extends Button implements ButtonInterfaceDaniel{
 	public void dim() {
 		this.setColor(Color.WHITE);
 	}
-	public void act(){
-		buttonAction.act();
-		//idk if u need this
-	}
+//	public void act(){
+//		buttonAction.act();
+//		//idk if u need this
+//	}
 }

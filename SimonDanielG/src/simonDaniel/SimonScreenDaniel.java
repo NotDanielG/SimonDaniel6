@@ -28,6 +28,7 @@ public class SimonScreenDaniel extends ClickableScreen implements Runnable{
 	private int[] computerStorage;
 	private Color[] colorRoom;
 	private static int amountClicked;
+	private int previousMove;
 	
 	public SimonScreenDaniel(int x, int y) {
 		super(x, y);
@@ -37,6 +38,7 @@ public class SimonScreenDaniel extends ClickableScreen implements Runnable{
 	}
 
 	public void initAllObjects(List<Visible> viewObjects) {
+		previousMove = -1;
 		gameLength = 3;
 		playerStorage = new int[gameLength];
 		computerStorage = new int[gameLength];
@@ -56,10 +58,15 @@ public class SimonScreenDaniel extends ClickableScreen implements Runnable{
 		viewObjects.add((Visible) buttons.get(0));
 	}
 	private ButtonInterfaceDaniel randomMove(){
-		return null;
+		int rand;
+		do{
+			rand = (int)(Math.random()*buttons.size());
+		}while (rand != previousMove);
+		previousMove = rand;
+		return buttons.get(rand);
 	}
 	private MoveInterfaceDaniel getMove(ButtonInterfaceDaniel b){
-		return new Move();
+		return new Move(b);
 	}
 	private void addColorButtons() {
 		int x = 20;
@@ -74,12 +81,13 @@ public class SimonScreenDaniel extends ClickableScreen implements Runnable{
 		return new Progress(20,20,120,120);
 	}
 	private ButtonInterfaceDaniel makeButton(int value, Color color) {
-		System.out.println("Hi");
-		return new ColorButton(20, 200, 50, 50, "Button 0", color, new Action(){
+		ButtonInterfaceDaniel b = new ColorButton(20, 200, 50, 50, "Button 0", color, new Action(){
 			public void act(){
 				
 			}
 		}, value);
+		return b;
+		
 		
 		
 	}

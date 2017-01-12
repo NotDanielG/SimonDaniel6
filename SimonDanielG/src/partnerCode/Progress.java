@@ -1,11 +1,12 @@
 package partnerCode;
 
 import java.awt.Color;
+
 import java.awt.Graphics2D;
 
-import guiSimon.components.Components;
+import gui.components.Components;
 import guiSimon.components.ProgressInterfaceDaniel;
-import guiSimon.components.Visible;
+import gui.components.Visible;
 
 public class Progress extends Components implements ProgressInterfaceDaniel, Visible {
 	private int score;

@@ -2,8 +2,9 @@ package guiSimon.components;
 
 import java.awt.Color;
 
+
 import gui.components.Action;
-import guiSimon.components.Clickable;
+import gui.components.Clickable;
 
 public interface ButtonInterfaceDaniel extends Clickable {
 	int sendValue(); 
