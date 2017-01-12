@@ -15,7 +15,7 @@ public class Progress extends Components implements ProgressInterfaceDaniel, Vis
 	}
 
 	public void increaseScore(int i) {
-
+		score += i;
 	}
 	@Override
 	public void update(Graphics2D g) {
@@ -29,8 +29,7 @@ public class Progress extends Components implements ProgressInterfaceDaniel, Vis
 
 	@Override
 	public void setGameDifficulty(int i) {
-		// TODO Auto-generated method stub
-		
+		difficulty = i;
 	}
 
 }
