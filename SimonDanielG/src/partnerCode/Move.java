@@ -1,15 +1,15 @@
 package partnerCode;
 
+import guiSimon.components.ButtonInterfaceDaniel;
 import guiSimon.components.MoveInterfaceDaniel;
 
 public class Move implements MoveInterfaceDaniel {
-
-	public Move(){
-		
+	private ButtonInterfaceDaniel b;
+	public Move(ButtonInterfaceDaniel b){
+		this.b = b;
 	}
-	public void returnButton() {
-		// TODO Auto-generated method stub
-
+	public ButtonInterfaceDaniel returnButton() {
+		return b;
 	}
 
 }
