@@ -12,10 +12,12 @@ import guiSimon.components.ButtonInterfaceDaniel;
 public class ColorButton extends Button implements ButtonInterfaceDaniel{
 	private int colorIdentifier;
 	private Color color;
+	private Color orgColor;
 	private Action buttonAction;
 	public ColorButton(int x, int y, int w, int h, String text, Color color, Action action, int value) {
 		super(x, y, w, h, text, color, action);
 		colorIdentifier = value;
+		orgColor = color;
 	}
 	public int sendValue() {
 		return colorIdentifier;
@@ -24,7 +26,7 @@ public class ColorButton extends Button implements ButtonInterfaceDaniel{
 		buttonAction = action;
 	}
 	public void highlight() {
-		this.setColor(color);
+		this.setColor(orgColor);
 	}
 	public void dim() {
 		this.setColor(Color.WHITE);
