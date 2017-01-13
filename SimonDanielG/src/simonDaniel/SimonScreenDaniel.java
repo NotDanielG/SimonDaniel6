@@ -202,6 +202,7 @@ public class SimonScreenDaniel extends ClickableScreen implements Runnable{
 				buttonX+=200;
 			}
 		}
+		
 		return buttonS;
 	}
 	public void run() {
