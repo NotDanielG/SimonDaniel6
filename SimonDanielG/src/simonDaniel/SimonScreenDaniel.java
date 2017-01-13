@@ -56,9 +56,11 @@ public class SimonScreenDaniel extends ClickableScreen implements Runnable{
 		buttonY = 200;
 		gameLength = 3;
 		playerTurn = false;
+		
 		playerStorage = new int[gameLength];
 		computerStorage = new int[gameLength];
 		turnNegative();
+		
 		colorRoom = new Color[6];
 		colorRoom[0] = Color.pink;
 		colorRoom[1] = Color.blue;
@@ -129,7 +131,7 @@ public class SimonScreenDaniel extends ClickableScreen implements Runnable{
 			public void act(){
 				Thread buttonPress = new Thread(new Runnable() {
 						public void run() {
-							if(playerTurn && !gameO){
+							if(playerTurn && !gameO && gameLength <= 6){
 								amountClicked++;
 								buttons.get(value).highlight();
 								try {
