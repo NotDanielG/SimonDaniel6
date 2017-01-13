@@ -37,6 +37,7 @@ public class SimonScreenDaniel extends ClickableScreen implements Runnable{
 	private static boolean playerTurn;
 	private static int playIndex;
 	private static int seqIndex;
+	private static boolean gameO;
 	
 	public SimonScreenDaniel(int x, int y) {
 		super(x, y);
@@ -47,6 +48,7 @@ public class SimonScreenDaniel extends ClickableScreen implements Runnable{
 
 	public void initAllObjects(List<Visible> viewObjects) {
 		buttonsCreated = 0;
+		gameO = false;
 		playIndex = 0;
 		seqIndex = 0;
 		previousMove = -1;
@@ -127,7 +129,7 @@ public class SimonScreenDaniel extends ClickableScreen implements Runnable{
 			public void act(){
 				Thread buttonPress = new Thread(new Runnable() {
 						public void run() {
-							if(playerTurn){
+							if(playerTurn && !gameO){
 								amountClicked++;
 								buttons.get(value).highlight();
 								try {
@@ -184,6 +186,7 @@ public class SimonScreenDaniel extends ClickableScreen implements Runnable{
 								else{
 									if(buttons.get(value).sendValue() != computerStorage[amountClicked-1]){
 										player.gameOver();
+										gameO = true;
 									}
 								}
 							}
